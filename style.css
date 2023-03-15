@@ -7,9 +7,6 @@
 :root {
   font-size: 62.5%;
 }
-.background {
-  display: flex;
-}
 
 body {
   background: url(./assets/fundo.svg);
@@ -18,6 +15,11 @@ body {
   padding: 18rem;
   height: 100vh;
 }
+
+.background {
+  display: flex;
+}
+
 
 .toupeiras {
   display: grid;
