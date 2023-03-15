@@ -4,122 +4,68 @@
   box-sizing: border-box;
 }
 
-.page {
-  max-width: 1440px;
-  margin: 100px auto;
+:root {
+  font-size: 62.5%;
+}
+.background {
+  display: flex;
 }
 
-.background {
-  position: absolute;
-  z-index: -1;
+body {
+  background: url(./assets/fundo.svg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  padding: 18rem;
+  height: 100vh;
 }
 
 .toupeiras {
   display: grid;
-  width: 40px;
-  height: 40px;
+  width: 100rem;
 
-  grid-template-areas: 
-    "A B C D" 
-    "E F G H"
-    "I J K L";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 
-  gap: 40px;
-  padding: 250px 200px;
-  text-align: center;
+  gap: 4rem;
+  margin: auto;
 }
 
 
+
+.toupeira4, .toupeira6, .toupeira11 {
+  animation-name: movetoupeira;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  background: url(./assets/toupeira6.svg);
+}
 
 .toupeira4 {
-  animation: movetoupeira 1s 4000ms;
-  background: url(./assets/toupeira6.svg);
+  animation-delay: 1s;
 }
 
-.toupeira6 {
-  background: url(./assets/toupeira6.svg);
-  animation: movetoupeira 1s ;
-  }
-
-.toupeira11 {
-  background: url(./assets/toupeira6.svg);
-  animation: movetoupeira 1s 2000ms;
-}
-
-.toupeira1 {
-  grid-area: A;
-}
-.toupeira2 {
-  grid-area: B;
-  
-}
-.toupeira3 {
-  grid-area: C;
-
-}
 .toupeira4 {
-  grid-area: D;
+  animation-delay: 3s;
 }
 
-.toupeira5 {
-  grid-area: E;
-
-}
-.toupeira6 {
-  grid-area: F;
-}
-.toupeira7 {
-  grid-area: G;
-
-}
-.toupeira8 {
-  grid-area: H;
-
-}
-.toupeira9 {
-  grid-area: I;
-
-}
-.toupeira10 {
-  grid-area: J;
-
-}
 .toupeira11 {
-  grid-area: K;
+  animation-delay: 5s;
 
-}
-.toupeira12 {
-  grid-area: L;
-}
-
-@keyframes invisivble {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes movetoupeira {
   0% {
-    z-index: 0;
     background-image: url(./assets/toupeira1.svg);       
   }
   25% {
-    z-index: 0;
     background-image: url(./assets/toupeira2.svg);   
   }
   50% {
-    z-index: 0;
     background-image: url(./assets/toupeira3.svg);   
   }
   75% {
-    z-index: 0;
     background-image: url(./assets/toupeira4.svg);   
   }
   100% {
-    z-index: 0;
     background-image: url(./assets/toupeira5.svg);   
   }
 }
