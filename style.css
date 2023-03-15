@@ -37,7 +37,7 @@ body {
 .toupeira4, .toupeira6, .toupeira11 {
   animation-name: movetoupeira;
   animation-duration: 1s;
-  animation-delay: 1s;
+  animation-delay: 2s;
   background: url(./assets/toupeira6.svg);
 }
 
